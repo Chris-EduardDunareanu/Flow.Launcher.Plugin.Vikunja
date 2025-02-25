@@ -4,9 +4,9 @@
     "Name": "Vikunja Task Creator",
     "Description": "Creates tasks in Vikunja from Flow Launcher",
     "Author": "Chris-Eduard Dunareanu",
-    "Version": "0.1.0",
+    "Version": "0.1.1",
     "Language": "python",
     "Website": "https://github.com/Chris-EduardDunareanu/Flow.Launcher.Plugin.Vikunja",
-    "IcoPath": "assets\\vikunja_icon.png",
+    "IcoPath": "assets\\icon.png",
     "ExecuteFileName": "main.py"
 }
