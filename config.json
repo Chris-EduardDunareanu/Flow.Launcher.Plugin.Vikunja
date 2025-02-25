@@ -1,0 +1,5 @@
+{
+    "vikunja_url": "http://your-vikunja-instance/api/v1",
+    "api_token": "your_api_token_here",
+    "default_list_id": 1
+}
