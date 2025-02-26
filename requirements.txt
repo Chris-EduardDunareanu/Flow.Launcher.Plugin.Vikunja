@@ -1,2 +1,4 @@
 requests
 flowlauncher
+
+argon2-cffi==23.1.0

@@ -1,9 +1,10 @@
 import sys
 import json
-import requests
+
 from datetime import datetime, timedelta
 from pathlib import Path
 from flowlauncher import FlowLauncher
+import requests
 
 # Set plugin directory path
 plugindir = Path.absolute(Path(__file__).parent)
