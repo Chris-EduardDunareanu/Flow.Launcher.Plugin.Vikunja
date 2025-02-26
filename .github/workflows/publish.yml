@@ -28,7 +28,9 @@ jobs:
       - name: Install Python Dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt -t ./lib
+          python -m venv venv
+          source venv/bin/activate
+          pip install -r requirements.txt -t lib
 
       - name: Package Plugin
         run: zip -r Flow.Launcher.Plugin.Vikunja.zip . -x '*.git*'
@@ -37,7 +39,7 @@ jobs:
         if: success()
         uses: softprops/action-gh-release@v1
         with:
-          files: 'Flow.Launcher.Plugin.Vikunja.zip'
+          files: 'Flow.Launcher.Plugin.Vikunja_v${{ steps.version.outputs.prop }}.zip'
           tag_name: "v${{ steps.version.outputs.prop }}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
