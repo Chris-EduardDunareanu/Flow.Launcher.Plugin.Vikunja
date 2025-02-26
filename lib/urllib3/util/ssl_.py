@@ -501,4 +501,5 @@ def _ssl_wrap_socket_impl(
         SSLTransport._validate_ssl_context_for_tls_in_tls(ssl_context)
         return SSLTransport(sock, ssl_context, server_hostname)
 
+    ssl_context.minimum_version = ssl.TLSVersion.TLSv1_2
     return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
