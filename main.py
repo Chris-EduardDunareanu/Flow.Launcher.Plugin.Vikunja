@@ -1,14 +1,17 @@
 import sys
 import json
 
-from datetime import datetime, timedelta
 from pathlib import Path
-from flowlauncher import FlowLauncher
-import requests
 
 # Set plugin directory path
 plugindir = Path.absolute(Path(__file__).parent)
+paths = (".", "lib", "plugin")
 sys.path = [str(plugindir / p) for p in (".", "lib", "plugin")] + sys.path
+
+from datetime import datetime, timedelta
+
+from flowlauncher import FlowLauncher
+import requests
 
 CONFIG_FILE = plugindir / "config.json"
 LISTS_CACHE_FILE = plugindir / "vikunja_lists.json"
